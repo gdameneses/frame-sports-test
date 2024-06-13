@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css"></link>
+    <title>FrameSports test</title>
+</head>
+<body>
+  <section class="main">
+    <div class="main__container">
+      <div class="main__wrapper main__wrapper--grow" id="user-image-container">
+        <div class="main__image__upload">
+          <button class="button button--green self--centered" id="upload-button">Upload an Image</button>
+        </div>
+      </div>
+
+      <div class="main__wrapper">
+        <img src="./rugby-field.svg" alt="Rugby field" class="main__image__field"> 
+      </div>
+    </div>
+
+    <div class="main__action">
+      <button class="button button--blue button--expand">SEND</button> 
+    </div>
+  </section>
+  <form class="main__form "id="image-upload-form">
+    <input type="file" id="image-upload" accept="image/*">
+  </form>
+</body>
+
+<script src="./index.js"></script>
+</html>

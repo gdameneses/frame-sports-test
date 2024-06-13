@@ -1,0 +1,105 @@
+body {
+    padding: 1rem;
+}
+
+.main__container {
+    display: flex;
+    align-items: center;
+    height: 723px;
+    justify-content: space-between;
+}
+
+.main__wrapper {
+    height: 100%;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.main__wrapper--grow {
+    flex-grow: 1;
+}
+
+.main__image {
+    height: 698px;
+    margin-bottom: 4rem;
+}
+
+.main__image__upload {
+    flex-grow: 1;
+    border: 2px solid #a1acbe;
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-image-container img {
+    max-height: 100%;
+    max-width: 100%;
+    box-shadow: 2px 2px 4px #d3d3d3;
+    cursor: crosshair;
+}
+
+.main__image__field {
+    height: 723px;
+    box-shadow: 0 0 8px #41642C;
+    cursor: crosshair;
+}
+.main__form {
+    display: none;
+}
+
+.main__action {
+    align-self: flex-start;
+    margin: 1rem;
+}
+
+
+
+
+
+/*
+button
+*/
+
+.button {
+    padding: 1rem 8rem;
+    border-style: none;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.button--expand {
+    padding-left: 16rem;
+    padding-right: 16rem;
+}
+
+.button--blue {
+    background-color: #1660E0;
+    color: #FFFFFF;
+}
+
+.button--blue:hover {
+    background-color: #0f45a4;
+}
+
+.button--blue:active {
+    background-color: #163d80;
+}
+
+.button--green {
+    background-color: #6CA649;
+    color: #FFFFFF;
+}
+
+.button--green:hover {
+    background-color: #7cbb55;
+}
+
+.button--green:active {
+    background-color: #74b14e;
+}
