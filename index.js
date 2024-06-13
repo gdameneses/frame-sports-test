@@ -1,5 +1,7 @@
 //Controller class, quickly reusable access
 //To any attributes
+//All JS work passes
+//Towards this class
 class Controller {
     constructor() {
         this.domObjects = { 
