@@ -10,18 +10,20 @@
   <section class="main">
     <div class="main__container">
       <div class="main__wrapper main__wrapper--grow" id="user-image-container">
-        <div class="main__image__upload">
+        <div class="main__image__upload" id="upload-form">
           <button class="button button--green self--centered" id="upload-button">Upload an Image</button>
         </div>
       </div>
 
-      <div class="main__wrapper">
-        <img src="./rugby-field.svg" alt="Rugby field" class="main__image__field"> 
+      <div class="main__wrapper" id="reference-image-container">
+        <img src="./rugby-field.svg" alt="Rugby field" class="main__image__field" id="reference-image"></img>
       </div>
     </div>
 
     <div class="main__action">
-      <button class="button button--blue button--expand">SEND</button> 
+      <button class="button button--grey button--contract" id="clear-selection-button">CLEAR SELECTION</button>
+      <button class="button button--grey button--contract" id="restore-button">UPLOAD NEW IMAGE</button>
+      <button class="button button--blue button--expand hidden" id="send-button">SEND</button>
     </div>
   </section>
   <form class="main__form "id="image-upload-form">
