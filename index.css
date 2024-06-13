@@ -41,6 +41,10 @@ body {
     max-width: 100%;
     box-shadow: 2px 2px 4px #d3d3d3;
     cursor: crosshair;
+    -webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
 }
 
 .main__image__field {
@@ -58,7 +62,9 @@ body {
 }
 
 
-
+.darken {
+    filter: brightness(40%);
+}
 
 
 /*
