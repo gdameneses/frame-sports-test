@@ -26,6 +26,33 @@ class Controller {
         this.#createRestoreInteraction();
     }
 
+    // Declares and instantiates a MutationObserver to start the 
+    // Click event listening after user uploads image
+    startObserver = () => {
+        const observerCallback = (mutationList, observer) => {
+            for (const mutation of mutationList) {
+              if (mutation) {
+                /** 
+                 * Once a change on observed element is detected
+                 * the observer stop observing and calls the 
+                 * method that controls the coordinate pairs
+                 */
+                observer.disconnect();
+                this.#startCoordinatePairWatcher();
+              }
+            }
+        };
+        const observer = new MutationObserver(observerCallback)
+        observer.observe(this.domObjects.userImageContainer, { childList: true });
+    }
+
+
+    /**
+     * Private methods only
+     * Handle Controller Instance
+     * Properties and values
+     */
+
     //Wires UploadButton with form.input
     #reassignUploadButton = () => {
         this.domObjects.uploadButton.addEventListener('click', () => {
@@ -97,26 +124,6 @@ class Controller {
 
     #clearLastEvent = () => {
         this.lastEvent = undefined
-    }
-
-    // Declares and instantiates a MutationObserver to start the 
-    // Click event listening after user uploads image
-    startObserver = () => {
-        const observerCallback = (mutationList, observer) => {
-            for (const mutation of mutationList) {
-              if (mutation) {
-                /** 
-                 * Once a change on observed element is detected
-                 * the observer stop observing and calls the 
-                 * method that controls the coordinate pairs
-                 */
-                observer.disconnect();
-                this.#startCoordinatePairWatcher();
-              }
-            }
-        };
-        const observer = new MutationObserver(observerCallback)
-        observer.observe(this.domObjects.userImageContainer, { childList: true });
     }
 
     // Grabs last two additions to eventList and 
